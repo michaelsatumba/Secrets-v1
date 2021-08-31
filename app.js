@@ -23,6 +23,8 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
+//routes
+
 
 app.get("/", function(req, res) {
   res.render("home")
