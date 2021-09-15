@@ -1,6 +1,10 @@
 
 body {
-  background-color: #E8ECEF;
+  background-color: #F3D5C0;
+}
+
+.jumbotron {
+  background-color: #F3D5C0;
 }
 
 .centered {
