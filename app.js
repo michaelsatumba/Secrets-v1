@@ -1,12 +1,16 @@
 
 
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-const md5 = require("md5")
+const md5 = require("md5");
 
 const app = express();
+
+console.log("weak password hash: " + md5("123456"));
+console.log("strong password hash: " + md5("sjkhdfsd8f7jhsd$%$sdfsdfHJKHSJFHDSF78324"));
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -28,7 +32,6 @@ const User = mongoose.model("User", userSchema);
 
 //routes
 
-console.log(md5("123456"));
 
 app.get("/", function(req, res) {
   res.render("home")
